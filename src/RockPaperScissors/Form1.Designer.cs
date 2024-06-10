@@ -45,6 +45,8 @@
             this.startButton = new System.Windows.Forms.Button();
             this.restartButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.winsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.compPickImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPickImg)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +58,7 @@
             this.rockButton.Location = new System.Drawing.Point(92, 96);
             this.rockButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.rockButton.Name = "rockButton";
-            this.rockButton.Size = new System.Drawing.Size(149, 35);
+            this.rockButton.Size = new System.Drawing.Size(149, 37);
             this.rockButton.TabIndex = 0;
             this.rockButton.Text = "Rock";
             this.rockButton.UseVisualStyleBackColor = false;
@@ -68,7 +70,7 @@
             this.paperButton.Location = new System.Drawing.Point(92, 175);
             this.paperButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.paperButton.Name = "paperButton";
-            this.paperButton.Size = new System.Drawing.Size(149, 35);
+            this.paperButton.Size = new System.Drawing.Size(149, 37);
             this.paperButton.TabIndex = 1;
             this.paperButton.Text = "Paper";
             this.paperButton.UseVisualStyleBackColor = false;
@@ -80,7 +82,7 @@
             this.scissorsButton.Location = new System.Drawing.Point(92, 255);
             this.scissorsButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.scissorsButton.Name = "scissorsButton";
-            this.scissorsButton.Size = new System.Drawing.Size(149, 35);
+            this.scissorsButton.Size = new System.Drawing.Size(149, 37);
             this.scissorsButton.TabIndex = 4;
             this.scissorsButton.Text = "Scissors";
             this.scissorsButton.UseVisualStyleBackColor = false;
@@ -223,12 +225,36 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Rounds left:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(961, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 45);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Wins:";
+            // 
+            // winsLabel
+            // 
+            this.winsLabel.AutoSize = true;
+            this.winsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.winsLabel.Location = new System.Drawing.Point(1060, 9);
+            this.winsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.winsLabel.Name = "winsLabel";
+            this.winsLabel.Size = new System.Drawing.Size(37, 45);
+            this.winsLabel.TabIndex = 19;
+            this.winsLabel.Text = "5";
+            // 
             // RockPaperScissorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1107, 441);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.winsLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.restartButton);
             this.Controls.Add(this.startButton);
@@ -272,5 +298,7 @@
         private Button startButton;
         private Button restartButton;
         private Label label1;
+        private Label label2;
+        private Label winsLabel;
     }
 }

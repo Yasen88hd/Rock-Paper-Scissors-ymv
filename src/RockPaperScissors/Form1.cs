@@ -27,7 +27,7 @@ namespace RockPaperScissors
         int compPoints;
         int rounds;
 
-        static readonly Result[,] resulTable =
+        static readonly Result[,] resultTable =
         {
             { Result.Tie, Result.Lose, Result.Win },
             { Result.Win, Result.Tie, Result.Lose },
@@ -53,8 +53,9 @@ namespace RockPaperScissors
             secondsLabel.Text = seconds.ToString();
 
             if (seconds != 0)
+            {
                 return;
-
+            }
             
             pickTimer.Stop();
 
@@ -84,7 +85,7 @@ namespace RockPaperScissors
                         break;
                 }
 
-                Result result = resulTable[(int)playerPick, (int)compPick];
+                Result result = resultTable[(int)playerPick, (int)compPick];
 
                 string playerPickName = Enum.GetName(typeof(Options), playerPick);
                 string compPickName = Enum.GetName(typeof(Options), compPick);
@@ -111,7 +112,6 @@ namespace RockPaperScissors
 
 
             rounds--;
-
             roundsLabel.Text = rounds.ToString();
 
             if (rounds == 0)
