@@ -28,256 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.rockButton = new System.Windows.Forms.Button();
-            this.paperButton = new System.Windows.Forms.Button();
-            this.scissorsButton = new System.Windows.Forms.Button();
-            this.compPickImg = new System.Windows.Forms.PictureBox();
-            this.secondsLabel = new System.Windows.Forms.Label();
-            this.roundsLabel = new System.Windows.Forms.Label();
-            this.resultLabel = new System.Windows.Forms.Label();
-            this.youLabel = new System.Windows.Forms.Label();
-            this.cpuLabel = new System.Windows.Forms.Label();
-            this.playerPointsLabel = new System.Windows.Forms.Label();
-            this.compPointsLabel = new System.Windows.Forms.Label();
-            this.pickTimer = new System.Windows.Forms.Timer(this.components);
-            this.playerPickImg = new System.Windows.Forms.PictureBox();
-            this.startButton = new System.Windows.Forms.Button();
-            this.restartButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.winsLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.compPickImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPickImg)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            rockButton = new Button();
+            paperButton = new Button();
+            scissorsButton = new Button();
+            compPickImg = new PictureBox();
+            secondsLabel = new Label();
+            roundsLabel = new Label();
+            youLabel = new Label();
+            cpuLabel = new Label();
+            playerPointsLabel = new Label();
+            compPointsLabel = new Label();
+            pickTimer = new System.Windows.Forms.Timer(components);
+            playerPickImg = new PictureBox();
+            restartButton = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            winsLabel = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            ((System.ComponentModel.ISupportInitialize)compPickImg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playerPickImg).BeginInit();
+            SuspendLayout();
             // 
             // rockButton
             // 
-            this.rockButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.rockButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rockButton.Location = new System.Drawing.Point(92, 96);
-            this.rockButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.rockButton.Name = "rockButton";
-            this.rockButton.Size = new System.Drawing.Size(149, 37);
-            this.rockButton.TabIndex = 0;
-            this.rockButton.Text = "Rock";
-            this.rockButton.UseVisualStyleBackColor = false;
+            rockButton.BackColor = SystemColors.ActiveBorder;
+            rockButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            rockButton.Location = new Point(131, 160);
+            rockButton.Margin = new Padding(1, 2, 1, 2);
+            rockButton.Name = "rockButton";
+            rockButton.Size = new Size(213, 62);
+            rockButton.TabIndex = 0;
+            rockButton.Text = "Rock";
+            rockButton.UseVisualStyleBackColor = false;
+            rockButton.Click += rockButton_Click;
             // 
             // paperButton
             // 
-            this.paperButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.paperButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paperButton.Location = new System.Drawing.Point(92, 175);
-            this.paperButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.paperButton.Name = "paperButton";
-            this.paperButton.Size = new System.Drawing.Size(149, 37);
-            this.paperButton.TabIndex = 1;
-            this.paperButton.Text = "Paper";
-            this.paperButton.UseVisualStyleBackColor = false;
+            paperButton.BackColor = SystemColors.ActiveBorder;
+            paperButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            paperButton.Location = new Point(131, 292);
+            paperButton.Margin = new Padding(1, 2, 1, 2);
+            paperButton.Name = "paperButton";
+            paperButton.Size = new Size(213, 62);
+            paperButton.TabIndex = 1;
+            paperButton.Text = "Paper";
+            paperButton.UseVisualStyleBackColor = false;
+            paperButton.Click += paperButton_Click;
             // 
             // scissorsButton
             // 
-            this.scissorsButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.scissorsButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.scissorsButton.Location = new System.Drawing.Point(92, 255);
-            this.scissorsButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.scissorsButton.Name = "scissorsButton";
-            this.scissorsButton.Size = new System.Drawing.Size(149, 37);
-            this.scissorsButton.TabIndex = 4;
-            this.scissorsButton.Text = "Scissors";
-            this.scissorsButton.UseVisualStyleBackColor = false;
+            scissorsButton.BackColor = SystemColors.ActiveBorder;
+            scissorsButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            scissorsButton.Location = new Point(131, 425);
+            scissorsButton.Margin = new Padding(1, 2, 1, 2);
+            scissorsButton.Name = "scissorsButton";
+            scissorsButton.Size = new Size(213, 62);
+            scissorsButton.TabIndex = 4;
+            scissorsButton.Text = "Scissors";
+            scissorsButton.UseVisualStyleBackColor = false;
+            scissorsButton.Click += scissorsButton_Click;
             // 
             // compPickImg
             // 
-            this.compPickImg.Image = global::RockPaperScissors.Properties.Resources.qq;
-            this.compPickImg.Location = new System.Drawing.Point(741, 82);
-            this.compPickImg.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.compPickImg.Name = "compPickImg";
-            this.compPickImg.Size = new System.Drawing.Size(230, 183);
-            this.compPickImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.compPickImg.TabIndex = 6;
-            this.compPickImg.TabStop = false;
+            compPickImg.Image = Properties.Resources.qq;
+            compPickImg.Location = new Point(1059, 137);
+            compPickImg.Margin = new Padding(1, 2, 1, 2);
+            compPickImg.Name = "compPickImg";
+            compPickImg.Size = new Size(329, 305);
+            compPickImg.SizeMode = PictureBoxSizeMode.Zoom;
+            compPickImg.TabIndex = 6;
+            compPickImg.TabStop = false;
             // 
             // secondsLabel
             // 
-            this.secondsLabel.AutoSize = true;
-            this.secondsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.secondsLabel.Location = new System.Drawing.Point(644, 158);
-            this.secondsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.secondsLabel.Name = "secondsLabel";
-            this.secondsLabel.Size = new System.Drawing.Size(37, 45);
-            this.secondsLabel.TabIndex = 7;
-            this.secondsLabel.Text = "5";
+            secondsLabel.AutoSize = true;
+            secondsLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            secondsLabel.Location = new Point(920, 263);
+            secondsLabel.Margin = new Padding(1, 0, 1, 0);
+            secondsLabel.Name = "secondsLabel";
+            secondsLabel.Size = new Size(54, 65);
+            secondsLabel.TabIndex = 7;
+            secondsLabel.Text = "5";
             // 
             // roundsLabel
             // 
-            this.roundsLabel.AutoSize = true;
-            this.roundsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.roundsLabel.Location = new System.Drawing.Point(487, 352);
-            this.roundsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.roundsLabel.Name = "roundsLabel";
-            this.roundsLabel.Size = new System.Drawing.Size(37, 45);
-            this.roundsLabel.TabIndex = 8;
-            this.roundsLabel.Text = "5";
-            // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.resultLabel.Location = new System.Drawing.Point(634, 352);
-            this.resultLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(182, 45);
-            this.resultLabel.TabIndex = 9;
-            this.resultLabel.Text = "You:    - PC:";
+            roundsLabel.AutoSize = true;
+            roundsLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            roundsLabel.Location = new Point(813, 608);
+            roundsLabel.Margin = new Padding(1, 0, 1, 0);
+            roundsLabel.Name = "roundsLabel";
+            roundsLabel.Size = new Size(54, 65);
+            roundsLabel.TabIndex = 8;
+            roundsLabel.Text = "5";
             // 
             // youLabel
             // 
-            this.youLabel.AutoSize = true;
-            this.youLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.youLabel.Location = new System.Drawing.Point(458, 49);
-            this.youLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.youLabel.Name = "youLabel";
-            this.youLabel.Size = new System.Drawing.Size(44, 28);
-            this.youLabel.TabIndex = 10;
-            this.youLabel.Text = "You";
+            youLabel.AutoSize = true;
+            youLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            youLabel.Location = new Point(654, 82);
+            youLabel.Margin = new Padding(1, 0, 1, 0);
+            youLabel.Name = "youLabel";
+            youLabel.Size = new Size(67, 41);
+            youLabel.TabIndex = 10;
+            youLabel.Text = "You";
             // 
             // cpuLabel
             // 
-            this.cpuLabel.AutoSize = true;
-            this.cpuLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cpuLabel.Location = new System.Drawing.Point(836, 49);
-            this.cpuLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.cpuLabel.Name = "cpuLabel";
-            this.cpuLabel.Size = new System.Drawing.Size(35, 28);
-            this.cpuLabel.TabIndex = 11;
-            this.cpuLabel.Text = "PC";
+            cpuLabel.AutoSize = true;
+            cpuLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            cpuLabel.Location = new Point(1194, 82);
+            cpuLabel.Margin = new Padding(1, 0, 1, 0);
+            cpuLabel.Name = "cpuLabel";
+            cpuLabel.Size = new Size(54, 41);
+            cpuLabel.TabIndex = 11;
+            cpuLabel.Text = "PC";
             // 
             // playerPointsLabel
             // 
-            this.playerPointsLabel.AutoSize = true;
-            this.playerPointsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.playerPointsLabel.Location = new System.Drawing.Point(703, 353);
-            this.playerPointsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.playerPointsLabel.Name = "playerPointsLabel";
-            this.playerPointsLabel.Size = new System.Drawing.Size(37, 45);
-            this.playerPointsLabel.TabIndex = 12;
-            this.playerPointsLabel.Text = "0";
+            playerPointsLabel.AutoSize = true;
+            playerPointsLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            playerPointsLabel.Location = new Point(654, 454);
+            playerPointsLabel.Margin = new Padding(1, 0, 1, 0);
+            playerPointsLabel.Name = "playerPointsLabel";
+            playerPointsLabel.Size = new Size(54, 65);
+            playerPointsLabel.TabIndex = 12;
+            playerPointsLabel.Text = "0";
             // 
             // compPointsLabel
             // 
-            this.compPointsLabel.AutoSize = true;
-            this.compPointsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.compPointsLabel.Location = new System.Drawing.Point(810, 353);
-            this.compPointsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.compPointsLabel.Name = "compPointsLabel";
-            this.compPointsLabel.Size = new System.Drawing.Size(37, 45);
-            this.compPointsLabel.TabIndex = 13;
-            this.compPointsLabel.Text = "0";
+            compPointsLabel.AutoSize = true;
+            compPointsLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            compPointsLabel.Location = new Point(1194, 454);
+            compPointsLabel.Margin = new Padding(1, 0, 1, 0);
+            compPointsLabel.Name = "compPointsLabel";
+            compPointsLabel.Size = new Size(54, 65);
+            compPointsLabel.TabIndex = 13;
+            compPointsLabel.Text = "0";
             // 
             // pickTimer
             // 
-            this.pickTimer.Interval = 1000;
+            pickTimer.Interval = 1000;
+            pickTimer.Tick += timer1_Tick;
             // 
             // playerPickImg
             // 
-            this.playerPickImg.Image = global::RockPaperScissors.Properties.Resources.qq;
-            this.playerPickImg.Location = new System.Drawing.Point(368, 82);
-            this.playerPickImg.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.playerPickImg.Name = "playerPickImg";
-            this.playerPickImg.Size = new System.Drawing.Size(231, 183);
-            this.playerPickImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.playerPickImg.TabIndex = 14;
-            this.playerPickImg.TabStop = false;
-            // 
-            // startButton
-            // 
-            this.startButton.BackColor = System.Drawing.Color.Chartreuse;
-            this.startButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.startButton.Location = new System.Drawing.Point(29, 344);
-            this.startButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(189, 67);
-            this.startButton.TabIndex = 15;
-            this.startButton.Text = "Start";
-            this.startButton.UseVisualStyleBackColor = false;
+            playerPickImg.Image = Properties.Resources.qq;
+            playerPickImg.Location = new Point(526, 137);
+            playerPickImg.Margin = new Padding(1, 2, 1, 2);
+            playerPickImg.Name = "playerPickImg";
+            playerPickImg.Size = new Size(330, 305);
+            playerPickImg.SizeMode = PictureBoxSizeMode.Zoom;
+            playerPickImg.TabIndex = 14;
+            playerPickImg.TabStop = false;
             // 
             // restartButton
             // 
-            this.restartButton.BackColor = System.Drawing.Color.Aqua;
-            this.restartButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.restartButton.Location = new System.Drawing.Point(891, 344);
-            this.restartButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.restartButton.Name = "restartButton";
-            this.restartButton.Size = new System.Drawing.Size(189, 67);
-            this.restartButton.TabIndex = 17;
-            this.restartButton.Text = "Restart";
-            this.restartButton.UseVisualStyleBackColor = false;
+            restartButton.BackColor = Color.Aqua;
+            restartButton.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            restartButton.Location = new Point(101, 561);
+            restartButton.Margin = new Padding(1, 2, 1, 2);
+            restartButton.Name = "restartButton";
+            restartButton.Size = new Size(270, 112);
+            restartButton.TabIndex = 17;
+            restartButton.Text = "Restart";
+            restartButton.UseVisualStyleBackColor = false;
+            restartButton.Click += restartButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(300, 352);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 45);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Rounds left:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(546, 608);
+            label1.Margin = new Padding(1, 0, 1, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(277, 65);
+            label1.TabIndex = 18;
+            label1.Text = "Rounds left:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(961, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 45);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Wins:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(1078, 608);
+            label2.Margin = new Padding(1, 0, 1, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(142, 65);
+            label2.TabIndex = 20;
+            label2.Text = "Wins:";
             // 
             // winsLabel
             // 
-            this.winsLabel.AutoSize = true;
-            this.winsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.winsLabel.Location = new System.Drawing.Point(1060, 9);
-            this.winsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.winsLabel.Name = "winsLabel";
-            this.winsLabel.Size = new System.Drawing.Size(37, 45);
-            this.winsLabel.TabIndex = 19;
-            this.winsLabel.Text = "5";
+            winsLabel.AutoSize = true;
+            winsLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            winsLabel.Location = new Point(1219, 608);
+            winsLabel.Margin = new Padding(1, 0, 1, 0);
+            winsLabel.Name = "winsLabel";
+            winsLabel.Size = new Size(54, 65);
+            winsLabel.TabIndex = 19;
+            winsLabel.Text = "0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(694, 475);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 38);
+            label3.TabIndex = 21;
+            label3.Text = "points";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(1237, 475);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 38);
+            label4.TabIndex = 22;
+            label4.Text = "points";
             // 
             // RockPaperScissorsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1107, 441);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.winsLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.restartButton);
-            this.Controls.Add(this.startButton);
-            this.Controls.Add(this.playerPickImg);
-            this.Controls.Add(this.compPointsLabel);
-            this.Controls.Add(this.playerPointsLabel);
-            this.Controls.Add(this.cpuLabel);
-            this.Controls.Add(this.youLabel);
-            this.Controls.Add(this.resultLabel);
-            this.Controls.Add(this.roundsLabel);
-            this.Controls.Add(this.secondsLabel);
-            this.Controls.Add(this.compPickImg);
-            this.Controls.Add(this.scissorsButton);
-            this.Controls.Add(this.paperButton);
-            this.Controls.Add(this.rockButton);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.Name = "RockPaperScissorsForm";
-            this.Text = "RockPaperScissors";
-            ((System.ComponentModel.ISupportInitialize)(this.compPickImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPickImg)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 255, 192);
+            ClientSize = new Size(1451, 723);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(winsLabel);
+            Controls.Add(label1);
+            Controls.Add(restartButton);
+            Controls.Add(playerPickImg);
+            Controls.Add(compPointsLabel);
+            Controls.Add(playerPointsLabel);
+            Controls.Add(cpuLabel);
+            Controls.Add(youLabel);
+            Controls.Add(roundsLabel);
+            Controls.Add(secondsLabel);
+            Controls.Add(compPickImg);
+            Controls.Add(scissorsButton);
+            Controls.Add(paperButton);
+            Controls.Add(rockButton);
+            Margin = new Padding(1, 2, 1, 2);
+            Name = "RockPaperScissorsForm";
+            Text = "RockPaperScissors";
+            ((System.ComponentModel.ISupportInitialize)compPickImg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playerPickImg).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -288,17 +289,17 @@
         private PictureBox compPickImg;
         private Label secondsLabel;
         private Label roundsLabel;
-        private Label resultLabel;
         private Label youLabel;
         private Label cpuLabel;
         private Label playerPointsLabel;
         private Label compPointsLabel;
         private System.Windows.Forms.Timer pickTimer;
         private PictureBox playerPickImg;
-        private Button startButton;
         private Button restartButton;
         private Label label1;
         private Label label2;
         private Label winsLabel;
+        private Label label3;
+        private Label label4;
     }
 }

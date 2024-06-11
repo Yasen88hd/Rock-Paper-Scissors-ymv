@@ -34,6 +34,8 @@ namespace RockPaperScissors
             { Result.Lose, Result.Win, Result.Tie }
         };
 
+        static Random rnd = new Random();
+
         public RockPaperScissorsForm()
         {
             InitializeComponent();
@@ -41,10 +43,17 @@ namespace RockPaperScissors
             playerPickImg.Image = Properties.Resources.qq;
             compPickImg.Image = Properties.Resources.qq;
 
-            rockButton.Enabled = false;
-            scissorsButton.Enabled = false;
-            paperButton.Enabled = false;
-            restartButton.Enabled = false;
+            winsLabel.Text = GameManager.data.Wins.ToString();
+
+            StartGame();
+
+            rockButton.Enabled = true;
+            rockButton.BackColor = SystemColors.ActiveCaption;
+            scissorsButton.Enabled = true;
+            scissorsButton.BackColor = SystemColors.ActiveCaption;
+            paperButton.Enabled = true;
+            paperButton.BackColor = SystemColors.ActiveCaption;
+            restartButton.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -68,9 +77,7 @@ namespace RockPaperScissors
             }
             else
             {
-                Random random = new Random();
-
-                Options compPick = (Options)random.Next(0, 3);
+                Options compPick = (Options)rnd.Next(0, 3);
 
                 switch (compPick)
                 {
@@ -125,6 +132,13 @@ namespace RockPaperScissors
                 scissorsButton.BackColor = SystemColors.InactiveCaption;
                 paperButton.Enabled = false;
                 paperButton.BackColor = SystemColors.InactiveCaption;
+
+                //update wins if the player wins
+                if (playerPoints > compPoints)
+                {
+                    GameManager.data.Wins++;
+                    winsLabel.Text = GameManager.data.Wins.ToString();
+                }
             }
             else //new round
             {
@@ -177,26 +191,9 @@ namespace RockPaperScissors
 
         void StartGame()
         {
-            #region enable buttons
-            rockButton.Enabled = true;
-            rockButton.BackColor = SystemColors.ActiveCaption;
-            scissorsButton.Enabled = true;
-            scissorsButton.BackColor = SystemColors.ActiveCaption;
-            paperButton.Enabled = true;
-            paperButton.BackColor = SystemColors.ActiveCaption;
-            restartButton.Enabled = true;
-            #endregion
-
             SetupGame();
 
             pickTimer.Start();
-        }
-
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            StartGame();
-
-            startButton.Enabled = false;
         }
 
         private void restartButton_Click(object sender, EventArgs e)
@@ -208,6 +205,14 @@ namespace RockPaperScissors
             compPointsLabel.Text = "0";
 
             roundsLabel.Text = rounds.ToString();
+
+            rockButton.Enabled = true;
+            rockButton.BackColor = SystemColors.ActiveCaption;
+            scissorsButton.Enabled = true;
+            scissorsButton.BackColor = SystemColors.ActiveCaption;
+            paperButton.Enabled = true;
+            paperButton.BackColor = SystemColors.ActiveCaption;
+            restartButton.Enabled = true;
         }
     }
 }

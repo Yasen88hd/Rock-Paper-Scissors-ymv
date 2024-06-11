@@ -11,9 +11,22 @@ namespace RockPaperScissors
 
             //load player data into scoreboard if there is any
             SaveManager.LoadScores();
+
+            nameTextBox.KeyDown += (sender, e) =>
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    StartGame();
+                }
+            };
         }
 
         private void startButton_Click(object sender, EventArgs e)
+        {
+            StartGame();
+        }
+
+        void StartGame()
         {
             string name = nameTextBox.Text;
 
