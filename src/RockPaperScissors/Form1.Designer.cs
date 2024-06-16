@@ -53,7 +53,7 @@
             // 
             // rockButton
             // 
-            rockButton.BackColor = SystemColors.ActiveBorder;
+            rockButton.BackColor = SystemColors.ActiveCaption;
             rockButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             rockButton.Location = new Point(131, 160);
             rockButton.Margin = new Padding(1, 2, 1, 2);
@@ -66,7 +66,7 @@
             // 
             // paperButton
             // 
-            paperButton.BackColor = SystemColors.ActiveBorder;
+            paperButton.BackColor = SystemColors.ActiveCaption;
             paperButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             paperButton.Location = new Point(131, 292);
             paperButton.Margin = new Padding(1, 2, 1, 2);
@@ -79,7 +79,7 @@
             // 
             // scissorsButton
             // 
-            scissorsButton.BackColor = SystemColors.ActiveBorder;
+            scissorsButton.BackColor = SystemColors.ActiveCaption;
             scissorsButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             scissorsButton.Location = new Point(131, 425);
             scissorsButton.Margin = new Padding(1, 2, 1, 2);

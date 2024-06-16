@@ -46,14 +46,7 @@ namespace RockPaperScissors
             winsLabel.Text = GameManager.data.Wins.ToString();
 
             StartGame();
-
-            rockButton.Enabled = true;
-            rockButton.BackColor = SystemColors.ActiveCaption;
-            scissorsButton.Enabled = true;
-            scissorsButton.BackColor = SystemColors.ActiveCaption;
-            paperButton.Enabled = true;
-            paperButton.BackColor = SystemColors.ActiveCaption;
-            restartButton.Enabled = true;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
