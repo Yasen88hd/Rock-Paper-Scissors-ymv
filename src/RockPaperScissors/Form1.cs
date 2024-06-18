@@ -40,13 +40,14 @@ namespace RockPaperScissors
         {
             InitializeComponent();
 
+            youLabel.Text = GameManager.currentPlayer.Name;
+
             playerPickImg.Image = Properties.Resources.qq;
             compPickImg.Image = Properties.Resources.qq;
 
-            winsLabel.Text = GameManager.data.Wins.ToString();
+            winsLabel.Text = GameManager.currentPlayer.Wins.ToString();
 
             StartGame();
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -129,8 +130,8 @@ namespace RockPaperScissors
                 //update wins if the player wins
                 if (playerPoints > compPoints)
                 {
-                    GameManager.data.Wins++;
-                    winsLabel.Text = GameManager.data.Wins.ToString();
+                    GameManager.currentPlayer.Wins++;
+                    winsLabel.Text = GameManager.currentPlayer.Wins.ToString();
                 }
             }
             else //new round

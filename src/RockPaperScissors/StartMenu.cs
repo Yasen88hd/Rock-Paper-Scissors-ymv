@@ -44,7 +44,7 @@ namespace RockPaperScissors
                 Scoreboard.data.Add(data);
             }
 
-            GameManager.data = data;
+            GameManager.currentPlayer = data;
 
 
             RockPaperScissorsForm rpcForm = new RockPaperScissorsForm();
@@ -62,7 +62,7 @@ namespace RockPaperScissors
 
     static class GameManager
     {
-        public static PlayerData data = null;
+        public static PlayerData currentPlayer = null;
     }
 
     class PlayerData
