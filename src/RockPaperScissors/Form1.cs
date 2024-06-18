@@ -206,7 +206,6 @@ namespace RockPaperScissors
             scissorsButton.BackColor = SystemColors.ActiveCaption;
             paperButton.Enabled = true;
             paperButton.BackColor = SystemColors.ActiveCaption;
-            restartButton.Enabled = true;
         }
     }
 }
